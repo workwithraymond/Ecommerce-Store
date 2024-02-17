@@ -12,4 +12,12 @@ Currently, two official plugins are available:
 #npm install vite@latest Ecommerce-store  
 -- npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
 -- npx tailwindcss init -p
+-- npm install -D @tailwindcss/typography
+-- npm install -D daisyui
 
+
+These are the sites I used in this project 
+
+https://tailwindcss.com/
+
+https://daisyui.com/
