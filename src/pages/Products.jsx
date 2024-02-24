@@ -5,7 +5,7 @@ const url = '/products'
 export const loader = async ({ request }) => {
   const response = await customFetch(url);
   console.log(response);
-  return null;
+  return {[rp]};
 }
 
 const Products = () => {
