@@ -8,9 +8,14 @@ import { ErrorElement } from './components';
 import { loader as landingLoader} from './pages/Landing'  
 import { loader as singleProductLoader} from './pages/SingleProduct'
 import { loader as productsLoader } from './pages/Products'  
-import {action as registerAction} from './pages/Register';
-// actions
+import { loader as checkoutLoader } from './pages/Checkout'
+import { loader as ordersLoader } from './pages/Orders'  
 
+// actions
+import {action as registerAction} from './pages/Register';
+import {action as loginAction} from './pages/Login';
+import {action as checkoutAction} from './components/CheckoutForm'
+import { store } from './utils/store';
 
 const router = createBrowserRouter([
   {
@@ -47,10 +52,13 @@ const router = createBrowserRouter([
       {
         path:'checkout',
         element:<Checkout />,
+        loader: checkoutLoader(store),
+        action: checkoutAction(store)
       },
       {
         path:'orders',
         element:<Orders />,
+        loader: ordersLoader(store),
       }
 
     ]
@@ -59,6 +67,7 @@ const router = createBrowserRouter([
     path:'/login',
     element: <Login />,
     errorElement: <Error/>,
+    action: loginAction(store),
   },
   {
     path:'/register',
