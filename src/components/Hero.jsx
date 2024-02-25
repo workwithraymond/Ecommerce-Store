@@ -14,7 +14,7 @@ const Hero = () => {
       <h1 className='max-w-2xl text-4xl font-bold tracking-tight sm:text-6xl'>
         We are changing the way people shop
       </h1>
-      <p className='mt-8 max-w-xl text-lg leading-8'>lorem</p>
+      <p className='mt-8 max-w-xl text-lg leading-8'></p>
       <div className='mt-10'>
         <Link to='/products' className='btn btn-primary'>
           Our Products
